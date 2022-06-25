@@ -1,3 +1,22 @@
-#home-heading {
-  color: purple;
+body {
+  background-color: #161616;
 }
+
+#home-wrapper {
+  width: 80%;
+  margin: 10% auto;
+}
+
+#home-heading {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: aqua;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: aqua;
+}
+
