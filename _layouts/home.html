@@ -3,13 +3,9 @@ layout: default
 ---
 
 <div class="home">
-  <h1 id="home-heading">Manuel Migoya</h1>
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
+  <div id="home-heading-box">
+    <h1 id="home-heading">Manuel Migoya</h1>
+  </div>
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
