@@ -57,3 +57,19 @@ li:not(:last-child) {
 .post-link:visited {
     color: white;
   }
+
+#home-social-box {
+  display: flexbox;
+  width: 30%;
+  margin: 0% auto;
+  height: 8%;
+  max-height: auto;
+  ;
+}
+
+.home-social-icon {
+  max-width: 20%;
+  max-height: auto;
+  margin: 5%;
+  color: gray;
+}
