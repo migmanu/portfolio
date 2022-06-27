@@ -5,10 +5,13 @@ layout: default
 <div class="home">
   <div id="home-wrapper">
     <div id="home-heading-box">
-      <h1 id="home-heading">Manuel Migoya</h1>
+      <h1 id="home-heading">
+        <span id="title-figure">> </span>
+        <span>manuel migoya</span>
+      </h1>
     </div>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "my latests posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li class="home-post-element">

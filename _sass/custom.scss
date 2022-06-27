@@ -14,15 +14,24 @@ h2 {
 }
 
 #home-heading {
+  font-size: 50px;
   margin-right: 20%;
   color: white;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-color: #ff82b2;
+  border-color: fuchsia;
   border-right-width: 2px;
   border-right-style: solid;
-  border-right-color: #ff82b2;
+  border-right-color: fuchsia;
   box-shadow: 6px 6px 10px -3px #ee0868;
+}
+
+#title-figure {
+  color: fuchsia;
+}
+
+.home-post-element {
+  margin: 0 auto;
 }
 
 .post-link {
