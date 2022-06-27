@@ -1,22 +1,35 @@
 body {
-  background-color: #161616;
+  background-color: #0E0E0E;
+}
+
+h2 {
+  color: white;
 }
 
 #home-wrapper {
+  background-color: #161616;
   width: 80%;
   margin: 10% auto;
+  padding: 15%;
 }
 
 #home-heading {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
+  margin-right: 20%;
   color: white;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-color: aqua;
-  border-right-width: 1px;
+  border-color: #ff82b2;
+  border-right-width: 2px;
   border-right-style: solid;
-  border-right-color: aqua;
+  border-right-color: #ff82b2;
+  box-shadow: 6px 6px 10px -3px #F614AD;
 }
 
+.post-link {
+  color: white;
+  
+}
+
+.post-link:visited {
+    color: white;
+  }
