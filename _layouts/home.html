@@ -1,34 +1,44 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
-  <div id="home-wrapper">
-    <div id="home-heading-box">
-      <h1 id="home-heading">
-        <span id="title-figure">> </span>
-        <span>manuel migoya</span>
-      </h1>
-    </div>
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li class="home-post-element">
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+  {%- include head.html -%}
 
-  {%- endif -%}
+  <body>
 
-  </div>
-  
-</div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
+          <div id="home-wrapper">
+            <div id="home-heading-box">
+              <h1 id="home-heading">
+                <span id="title-figure">> </span>
+                <span>manuel migoya</span>
+              </h1>
+            </div>
+          {%- if site.posts.size > 0 -%}
+            <h2 id="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
+            <ul class="post-list">
+              {%- for post in site.posts -%}
+              <li class="home-post-element">
+                <h3>
+                  <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                  </a>
+                </h3>
+                {%- if site.show_excerpts -%}
+                  {{ post.excerpt }}
+                {%- endif -%}
+              </li>
+              {%- endfor -%}
+            </ul>
+        
+          {%- endif -%}
+        
+          </div>
+          
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
