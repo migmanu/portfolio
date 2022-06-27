@@ -1,5 +1,6 @@
 body {
   background-color: #0E0E0E;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h2 {
@@ -25,7 +26,7 @@ h2 {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: fuchsia;
-  box-shadow: 9px 9px 10px -3px #ee0868;
+  box-shadow: 9px 9px 10px -3px #f53585;
 }
 
 #title-figure {
@@ -65,7 +66,7 @@ li:not(:last-child) {
 
 #home-social-box {
   display: flexbox;
-  width: 30%;
+  width: 35%;
   margin: 0% auto;
   height: 8%;
   max-height: auto;
