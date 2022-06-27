@@ -11,7 +11,7 @@ layout: default
     <h2 class="post-list-heading">{{ page.list_title | default: "my latests posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li class="home-post-element">
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
