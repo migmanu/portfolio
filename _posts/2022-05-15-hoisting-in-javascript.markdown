@@ -41,7 +41,7 @@ But it is most **IMPORTANT** to distinguish between a declaration and an assignm
 
 That is why the following is correct:
 
-```JavaScript
+```javascript
 a = 2; // assignment (initialization)
 
 var a; // declaration
@@ -52,7 +52,7 @@ console.log( a ) // prints 2
 
 But this would result in `undefined`:
 
-```JavaScript
+```javascript
 console.log( a ); // undefined
 
 var a = 2;
@@ -61,7 +61,7 @@ var a = 2;
 
 The above example would be the same as:
 
-```JavaScript
+```javascript
  var a;
  
  console.log( a );
@@ -76,7 +76,7 @@ But hoisting doesn't behave exactly the same for [[Const, Let and Var]] declared
 
 The default initialization of `var` us `undefined`. Here are some examples from [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting):
 
-```JavaScript
+```javascript
 console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
 var num; // Declaration
 num = 6; // Initialization
@@ -92,7 +92,7 @@ But, what happens if we don't use any declaration at all?
 Variables that are only initialized but not declared do not get hoisted. That is why trying to access them before they are initialized results in a ReferenceError.
 MND example:
 
-```JavaScript
+```javascript
 console.log(num); // Throws ReferenceError exception - the interpreter doesn't know about `num`.
 num = 6; // Initialization
 ```
@@ -104,7 +104,7 @@ num = 6; // Initialization
 This means that calling them before initialization results in a ReferenceError exception.
 MDN example:
 
-```JavaScript
+```javascript
 console.log(num); // Throws ReferenceError exception as the variable value is uninitialized
 let num = 6; // Initialization
 ```
@@ -113,7 +113,7 @@ let num = 6; // Initialization
 
 **Functions declarations are hoisted, function expressions are not**.
 
-```JavaScript
+```javascript
 foo(); // TypeError
 bar(); //ReferenceError, bar is not available out of its attached scope
 
@@ -129,7 +129,7 @@ In the previous case, the variable identifier `foo` is hoisted inside its attach
 
 Functions are hoisted first. This can be seen when "duplicate" declarations are used:
 
-```JavaScript
+```javascript
 foo(); // 1
 
 var foo;
@@ -146,7 +146,7 @@ foo = function() {
 
 `var foo;` is ignored in the previous example as it is hoisted after `function foo()`. Subsequent function declarations do override previous ones:
 
-```JavaScript
+```javascript
 foo(); // 2
 
 function foo() {
