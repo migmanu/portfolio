@@ -4,6 +4,10 @@ $highlight-color: fuchsia;
 $text-box-color:#161616;
 $background-color: #0E0E0E;
 
+.language-javascript {
+  background-color: black;
+}
+
 body {
   background-color: $background-color;
   font-family: 'Fira Code', monospace;
@@ -25,7 +29,6 @@ p strong {
   font-weight: normal;
   color: $highlight-color;
 }
-
 
 
 /* home page settings */
