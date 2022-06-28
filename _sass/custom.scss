@@ -15,7 +15,29 @@ h1, h2, h3, p {
 
 h2 {
   font-size: 25px;
+}
+
+#title-figure {
+  color: fuchsia;
+}
+
+p strong {
+  font-weight: normal;
+  color: $highlight-color;
+}
+
+pre {
+  background-color: $background-color;
+}
+
+pre code {
+  background-color: $background-color;
   color: white;
+}
+
+code {
+  background-color: $background-color;
+  border-style: none;
 }
 
 /* home page settings */
@@ -41,9 +63,6 @@ h2 {
   box-shadow: 9px 9px 10px -3px #f53585;
 }
 
-#title-figure {
-  color: fuchsia;
-}
 
 #home-description {
   max-width: 90%;
