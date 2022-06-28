@@ -1,15 +1,15 @@
 /* General settings */
 
+$highlight-color: fuchsia;
+$text-box-color:#161616;
+$background-color: #0E0E0E;
+
 body {
-  background-color: #0E0E0E;
+  background-color: $background-color;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-p {
-  color: white;
-}
-
-h1, h2, h3 {
+h1, h2, h3, p {
   color: white;
 }
 
@@ -21,7 +21,7 @@ h2 {
 /* home page settings */
 
 #home-wrapper {
-  background-color: #161616;
+  background-color: $text-box-color;
   width: 80%;
   margin: 10% auto;
   padding: 10%;
@@ -34,10 +34,10 @@ h2 {
   color: white;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-color: fuchsia;
+  border-color: $highlight-color;
   border-right-width: 2px;
   border-right-style: solid;
-  border-right-color: fuchsia;
+  border-right-color: $highlight-color;
   box-shadow: 9px 9px 10px -3px #f53585;
 }
 
