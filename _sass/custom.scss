@@ -94,3 +94,10 @@ li:not(:last-child) {
 }
 
 /* post template settings */
+
+.post-box{
+  width: 90%;
+  margin: 0 auto;
+  padding: 5%;
+  background-color: $text-box-color;
+}
