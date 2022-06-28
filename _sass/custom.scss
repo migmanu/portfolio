@@ -3,6 +3,14 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+p {
+  color: white;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
 h2 {
   font-size: 25px;
   color: white;
@@ -75,6 +83,7 @@ li:not(:last-child) {
 
 .home-social-icon {
   max-width: 20%;
+  min-width: 40px;
   max-height: auto;
   margin: 5%;
   color: gray;
