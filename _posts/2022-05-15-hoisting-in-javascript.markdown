@@ -20,7 +20,8 @@ Hoisting emphasizes that it is in fact "the order in which code is executed that
 [[Scope]]
 **Hoisting is per-scope**. This means that hoisted functions and variables are "moved" to the top of their respective scope:
 
-```JavaScript
+
+```javascript
 function foo() {
     // myVariable has been "moved" here
     var myVariable;

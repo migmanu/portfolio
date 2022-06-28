@@ -28,13 +28,12 @@ twitter_username: migmanu_
 github_username:  migmanu
 
 
-# Highlight code
-markdown: kramdown
-highlighter: rouge
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - rouge
+  - kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
