@@ -129,7 +129,7 @@ In the previous case, the variable identifier `foo` is hoisted inside its attach
 
 Functions are hoisted first. This can be seen when "duplicate" declarations are used:
 
-```javascript
+{% highlight javascript %}
 foo(); // 1
 
 var foo;
@@ -142,7 +142,7 @@ foo = function() {
     console.log(2);
 };
 
-```
+{% endhighlight %}
 
 `var foo;` is ignored in the previous example as it is hoisted after `function foo()`. Subsequent function declarations do override previous ones:
 
