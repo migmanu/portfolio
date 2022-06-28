@@ -1,51 +1,43 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: default
+---
 
-  {%- include head.html -%}
+<div class="home">
+  <div id="home-wrapper">
+    <div id="home-heading-box">
+      <h1 id="home-heading">
+        <span id="title-figure">> </span>
+        <span>manuel migoya</span>
+      </h1>
+    </div>
+    <div id="home-description">
+      <p>This is a description about me. I am super hardworking. You should really, really hire me.
+        I have been learning all this complicated stuff by my own and I know I can do good work!
+        Hire me! Hire me!
+      </p>
+    </div>
+  {%- if site.posts.size > 0 -%}
+    <h2 id="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li class="home-post-element">
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
 
-  <body>
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-          <div id="home-wrapper">
-            <div id="home-heading-box">
-              <h1 id="home-heading">
-                <span id="title-figure">> </span>
-                <span>manuel migoya</span>
-              </h1>
-            </div>
-            <div id="home-description">
-              <p>This is a description about me. I am super hardworking. You should really, really hire me.
-                I have been learning all this complicated stuff by my own and I know I can do good work!
-                Hire me! Hire me!
-              </p>
-            </div>
-          {%- if site.posts.size > 0 -%}
-            <h2 id="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
-            <ul class="post-list">
-              {%- for post in site.posts -%}
-              <li class="home-post-element">
-                <h3>
-                  <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                  </a>
-                </h3>
-                {%- if site.show_excerpts -%}
-                  {{ post.excerpt }}
-                {%- endif -%}
-              </li>
-              {%- endfor -%}
-            </ul>
-        
-          {%- endif -%}
-            <div id="home-social-box">
-              <a href="https://github.com/migmanu"><img class="home-social-icon" src="/icons/github_logo.png" alt="github logo"></a>
-              <a href="https://twitter.com/migmanu_"><img class="home-social-icon" src="/icons/twitter-logo.png" alt="twitter logo"></a>
-              <a href="https://www.linkedin.com/in/manuel-migoya-bussolotti-a1b5a9bb/"><img class="home-social-icon" src="/icons/linkedin-icon.png" alt="linkedin logo"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+  {%- endif -%}
+    <div id="home-social-box">
+      <a href="https://github.com/migmanu"><img class="home-social-icon" src="/icons/github_logo.png" alt="github logo"></a>
+      <a href="https://twitter.com/migmanu_"><img class="home-social-icon" src="/icons/twitter-logo.png" alt="twitter logo"></a>
+      <a href="https://www.linkedin.com/in/manuel-migoya-bussolotti-a1b5a9bb/"><img class="home-social-icon" src="/icons/linkedin-icon.png" alt="linkedin logo"></a>
+    </div>
+  </div>
+</div>
