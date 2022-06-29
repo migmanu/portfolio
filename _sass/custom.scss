@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, p {
-  color: white;
+  color: $basic-font;
 }
 
 h2 {
@@ -23,7 +23,7 @@ h2 {
 }
 
 #title-figure {
-  color: fuchsia;
+  color: $highlight-color;
 }
 
 p strong {
@@ -49,7 +49,7 @@ li {
   width: 90%;
   margin-bottom: 5%;
   font-size: 50px;
-  color: white;
+  color: $basic-font;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-color: $highlight-color;
@@ -62,12 +62,12 @@ li {
 
 #home-description {
   max-width: 90%;
-  color: white;
+  color: $basic-font;
 }
 
 .post-list {
   margin-left: 4%;
-  color: white;
+  color: $basic-font;
   list-style-type: disc;
 }
 
@@ -83,12 +83,12 @@ li:not(:last-child) {
 
 .post-link {
   font-size: medium;
-  color: white;
+  color: $basic-font;
   
 }
 
 .post-link:visited {
-    color: white;
+    color: $basic-font;
   }
 
 #home-social-box {
