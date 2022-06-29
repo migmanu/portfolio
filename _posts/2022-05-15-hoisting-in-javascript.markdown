@@ -5,8 +5,6 @@ date: '2022-06-21 18:05:19 +0200'
 categories: jekyll update
 ---
 
-# Hoisting
-
 To understand #hoisting it's important to know that not all code is interpreted exactly at the same time nor from top to bottom. In fact **all declarations, both variables and functions, are processed first** by the compiler, before any code is executed.
 
 ## What does hoisting mean?
