@@ -15,9 +15,14 @@ body {
   background-color: $background-color;
 }
 
-h1, h2, h3, p {
+h1, h2, h3 {
   color: $basic-font;
   font-family: $title-font;
+}
+
+p, li, a {
+  color: $basic-font;
+  font-family: $text-font;
 }
 
 #title-figure {
@@ -27,14 +32,6 @@ h1, h2, h3, p {
 p strong {
   font-weight: normal;
   color: $highlight-color;
-}
-
-li {
-  color: $basic-font;
-}
-
-p {
-  font-family: $text-font;
 }
 
 
