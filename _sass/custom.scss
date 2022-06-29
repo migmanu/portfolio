@@ -3,6 +3,7 @@
 $highlight-color: fuchsia;
 $text-box-color:#161616;
 $background-color: #0E0E0E;
+$basic-font: white;
 
 .language-javascript {
   background-color: black;
@@ -28,6 +29,10 @@ h2 {
 p strong {
   font-weight: normal;
   color: $highlight-color;
+}
+
+li {
+  color: $basic-font;
 }
 
 
