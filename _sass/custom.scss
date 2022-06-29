@@ -4,6 +4,8 @@ $highlight-color: fuchsia;
 $text-box-color:#161616;
 $background-color: #0E0E0E;
 $basic-font: white;
+$title-font: 'Fira Code', monospace;
+$text-font: 'Ubuntu', sans-serif;
 
 .language-javascript {
   background-color: black;
@@ -11,15 +13,11 @@ $basic-font: white;
 
 body {
   background-color: $background-color;
-  font-family: 'Fira Code', monospace;
 }
 
 h1, h2, h3, p {
   color: $basic-font;
-}
-
-h2 {
-  font-size: 25px;
+  font-family: $title-font;
 }
 
 #title-figure {
@@ -33,6 +31,10 @@ p strong {
 
 li {
   color: $basic-font;
+}
+
+p {
+  font-family: $text-font;
 }
 
 
