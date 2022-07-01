@@ -1,8 +1,8 @@
 /* General settings */
 
-$highlight-color: fuchsia;
-$text-box-color:#161616;
-$background-color: #0E0E0E;
+$highlight-color: #ff7aad;
+$text-box-color: #1c2126;
+$background-color: #181c20;
 $basic-font: white;
 $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
@@ -20,9 +20,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $title-font;
 }
 
-p, li, a {
+p, li {
   color: $basic-font;
   font-family: $text-font;
+}
+
+a:hover {
+  color: $highlight-color;
 }
 
 #title-figure {
@@ -30,7 +34,7 @@ p, li, a {
 }
 
 p strong {
-  font-weight: normal;
+  font-weight: bold;
   color: $highlight-color;
 }
 
