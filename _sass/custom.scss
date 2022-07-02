@@ -7,6 +7,7 @@ $basic-font: white;
 $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
 
+
 .language-javascript {
   background-color: black;
 }
@@ -123,3 +124,11 @@ li:not(:last-child) {
     margin-top: 6%;
   }
 }
+
+/*  styles for larger screens */
+
+@media (min-width:769px) {
+  
+}
+
+
