@@ -1,6 +1,7 @@
 ---
 title: Hoisting in JavaScript
 layout: post
+toc: true
 date: '2022-06-21 18:05:19 +0200'
 categories: jekyll update
 ---
