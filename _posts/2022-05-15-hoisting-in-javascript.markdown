@@ -86,7 +86,7 @@ The same would happen if the variable declaration and initialization were made i
 
 But, what happens if we don't use any declaration at all?
 
-### un-declared variable hoisting
+### un-declared variable hoisting this title is a test of toc wraping
 
 Variables that are only initialized but not declared do not get hoisted. That is why trying to access them before they are initialized results in a ReferenceError.
 MND example:

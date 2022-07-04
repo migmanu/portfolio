@@ -7,6 +7,49 @@ $basic-font: white;
 $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 80% 30%;
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+    align-items: center;
+  }
+}
+
+.toc-box {
+  grid-column-start: 1;
+  position: static;
+  left: 0;
+  font-size: small;
+
+  @media screen and (max-width: 600px) {
+    position: static;
+    width: 90%;
+    font-size: medium;
+    background-color: $text-box-color;
+    margin-bottom: 3%;
+    left: auto;
+    float: none;
+  }
+}
+
+.post {
+  grid-column-start: 2;
+  width: 80%;
+  float: right;
+  padding: 5%;
+  background-color: $text-box-color;
+
+  @media screen and (max-width: 600px) {
+    float: none;
+  }
+
+  h2 {
+    margin-top: 6%;
+  }
+}
 
 .language-javascript {
   background-color: black;
@@ -41,6 +84,7 @@ p strong {
 
 
 /* home page settings */
+
 
 #home-wrapper {
   background-color: $text-box-color;
@@ -114,21 +158,10 @@ li:not(:last-child) {
 
 /* post template settings */
 
-.post {
-  width: 90%;
-  margin: 0 auto;
-  padding: 5%;
-  background-color: $text-box-color;
 
-  h2 {
-    margin-top: 6%;
-  }
-}
 
 /*  styles for larger screens */
 
-@media (min-width:769px) {
-  
-}
+
 
 
