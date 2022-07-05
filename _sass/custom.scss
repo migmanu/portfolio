@@ -10,7 +10,7 @@ $text-font: 'Ubuntu', sans-serif;
 $max-mobile-width: 600px;
 
 .wrapper {
-  min-width: 100vh;
+  min-width: 100vmax;
 }
 
 .wrapper::after {
@@ -19,9 +19,7 @@ $max-mobile-width: 600px;
 
 .post-wrapper {
   display: grid;
-  grid-template-columns: 20% 70% 10%;
-  width: 100%;
-  min-width: 100%;
+  grid-template-columns: 30% 70%;
   margin: auto;
 
   @media screen and (max-width: $max-mobile-width) {
@@ -30,11 +28,8 @@ $max-mobile-width: 600px;
   }
 }
 
-.toc-box {
+.left-box {
   grid-column-start: 1;
-  position: static;
-  left: 0;
-  font-size: small;
 
   @media screen and (max-width: 600px) {
     position: static;
