@@ -8,9 +8,20 @@ $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
 
 .wrapper {
+  min-width: 100vh;
+  margin: 0px;
+}
+
+.wrapper::after {
+  max-width: -1%;
+}
+
+.post-wrapper {
   display: grid;
-  grid-template-columns: 30% 80% 30%;
+  grid-template-columns: 20% 70% 10%;
   width: 100%;
+  min-width: 100%;
+  margin: auto;
 
   @media screen and (max-width: 600px) {
     display: block;
@@ -88,7 +99,7 @@ p strong {
 
 #home-wrapper {
   background-color: $text-box-color;
-  width: 80%;
+  width: 40%;
   margin: 10% auto;
   padding: 10%;
 }
