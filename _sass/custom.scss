@@ -7,9 +7,10 @@ $basic-font: white;
 $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
 
+$max-mobile-width: 600px;
+
 .wrapper {
   min-width: 100vh;
-  margin: 0px;
 }
 
 .wrapper::after {
@@ -23,7 +24,7 @@ $text-font: 'Ubuntu', sans-serif;
   min-width: 100%;
   margin: auto;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $max-mobile-width) {
     display: block;
     align-items: center;
   }
@@ -99,9 +100,13 @@ p strong {
 
 #home-wrapper {
   background-color: $text-box-color;
-  width: 40%;
+  width: 80%;
   margin: 10% auto;
   padding: 10%;
+
+  @media screen and (max-width: $max-mobile-width) {
+    width: 90%;
+  }
 }
 
 #home-heading {
