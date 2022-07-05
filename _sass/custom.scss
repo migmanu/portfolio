@@ -9,8 +9,14 @@ $text-font: 'Ubuntu', sans-serif;
 
 $max-mobile-width: 600px;
 
+.page-content {
+  padding: 0;
+}
+
 .wrapper {
-  min-width: 100vmax;
+  min-width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .wrapper::after {
@@ -18,9 +24,8 @@ $max-mobile-width: 600px;
 }
 
 .post-wrapper {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  margin: auto;
+  display: flex;
+  align-items: flex-start;
 
   @media screen and (max-width: $max-mobile-width) {
     display: block;
@@ -29,7 +34,11 @@ $max-mobile-width: 600px;
 }
 
 .left-box {
-  grid-column-start: 1;
+  width: 20%;
+  display: flex;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
 
   @media screen and (max-width: 600px) {
     position: static;
@@ -42,15 +51,20 @@ $max-mobile-width: 600px;
   }
 }
 
+.toc-box {
+  margin-top: 40%;
+  margin-left: 3%;
+}
+
 .post {
-  grid-column-start: 2;
-  width: 80%;
-  float: right;
+  width: 60%;
   padding: 5%;
+  margin: 5% 0% 5% 1%;
   background-color: $text-box-color;
 
   @media screen and (max-width: 600px) {
     float: none;
+    margin-left: auto;
   }
 
   h2 {
