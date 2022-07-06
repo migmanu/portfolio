@@ -155,13 +155,6 @@ li:not(:last-child) {
 
 .left-box {
   display: none;
-  position: absolute;
-  width: 90%;
-  font-size: medium;
-  background-color: $main-box-bcolor;
-  margin-bottom: 3%;
-  left: auto;
-  float: none;
 
   @media screen and (min-width: 600px) {
     width: 30%;
@@ -176,6 +169,14 @@ li:not(:last-child) {
 .toc-box {
   margin-top: 40%;
   margin-left: 3%;
+}
+
+.mobile-toc {
+  margin-bottom: 10%;
+  
+  @media screen and (min-width: $screen-width-600) {
+    display: none;
+  }
 }
 
 .post {
