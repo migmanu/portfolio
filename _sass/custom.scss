@@ -48,25 +48,31 @@ p strong {
 }
 
 .wrapper {
-  min-width: 100%;
+  width: 90%;
   margin: 0px;
-  padding: 0px;
+
+  @media screen and (min-width: $screen-width-600) {
+    min-width: 90%;
+  }
 }
 
 .wrapper::after {
-  max-width: -1%;
+  display: none;
 }
 
 /* || HOME STYLES */
 
-#home-wrapper {
-  background-color: $main-box-bcolor;
-  width: 50%;
-  margin: 10% auto;
-  padding: 5%;
 
-  @media screen and (max-width: $screen-width-600) {
-    width: 90%;
+
+#home-wrapper {
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (min-width: $screen-width-600) {
+    background-color: $main-box-bcolor;
+    width: 50%;
+    margin: 2% auto;
+    padding: 5%;
   }
 }
 
@@ -82,6 +88,10 @@ p strong {
   border-right-style: solid;
   border-right-color: $highlight-color;
   box-shadow: 9px 9px 10px -3px #f53585;
+}
+
+#title-figure {
+  color: $highlight-color;
 }
 
 #home-description {
@@ -132,37 +142,36 @@ li:not(:last-child) {
 }
 
 
-
-
-
-
-
+/* || POST STYLES */
 
 .post-wrapper {
-  display: flex;
-  align-items: flex-start;
+  display: block;
+  align-items: center;
+  width: 90%;
 
-  @media screen and (max-width: $screen-width-600) {
-    display: block;
-    align-items: center;
+  @media screen and (min-width: $screen-width-600) {
+    display: flex;
+    align-items: flex-start;
   }
 }
 
 .left-box {
-  width: 20%;
-  display: flex;
-  align-items: flex-start;
-  position: sticky;
-  top: 0;
+  display: none;
+  position: absolute;
+  width: 90%;
+  font-size: medium;
+  background-color: $main-box-bcolor;
+  margin-bottom: 3%;
+  left: auto;
+  float: none;
 
-  @media screen and (max-width: 600px) {
-    position: static;
-    width: 90%;
-    font-size: medium;
-    background-color: $main-box-bcolor;
-    margin-bottom: 3%;
-    left: auto;
-    float: none;
+  @media screen and (min-width: 600px) {
+    width: 20%;
+    display: flex;
+    background-color: $background-color;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
   }
 }
 
@@ -178,37 +187,11 @@ li:not(:last-child) {
   background-color: $main-box-bcolor;
 
   @media screen and (max-width: 600px) {
+    width: 100%;
     float: none;
-    margin-left: auto;
   }
 
   h2 {
     margin-top: 6%;
   }
 }
-
-
-
-
-
-#title-figure {
-  color: $highlight-color;
-}
-
-
-
-
-/* home page settings */
-
-
-
-
-/* post template settings */
-
-
-
-/*  styles for larger screens */
-
-
-
-
