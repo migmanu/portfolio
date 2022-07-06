@@ -109,9 +109,9 @@ p strong {
 
 #home-wrapper {
   background-color: $text-box-color;
-  width: 80%;
+  width: 50%;
   margin: 10% auto;
-  padding: 10%;
+  padding: 5%;
 
   @media screen and (max-width: $max-mobile-width) {
     width: 90%;
