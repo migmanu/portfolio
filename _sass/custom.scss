@@ -1,80 +1,16 @@
-/* General settings */
+/* || VARIABLES */
 
 $highlight-color: #ff7aad;
-$text-box-color: #1c2126;
+$main-box-bcolor: #1c2126;
 $background-color: #181c20;
 $basic-font: white;
 $title-font: 'Fira Code', monospace;
 $text-font: 'Ubuntu', sans-serif;
+$screen-width-600: 600px;
 
-$max-mobile-width: 600px;
 
-.page-content {
-  padding: 0;
-}
 
-.wrapper {
-  min-width: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-
-.wrapper::after {
-  max-width: -1%;
-}
-
-.post-wrapper {
-  display: flex;
-  align-items: flex-start;
-
-  @media screen and (max-width: $max-mobile-width) {
-    display: block;
-    align-items: center;
-  }
-}
-
-.left-box {
-  width: 20%;
-  display: flex;
-  align-items: flex-start;
-  position: sticky;
-  top: 0;
-
-  @media screen and (max-width: 600px) {
-    position: static;
-    width: 90%;
-    font-size: medium;
-    background-color: $text-box-color;
-    margin-bottom: 3%;
-    left: auto;
-    float: none;
-  }
-}
-
-.toc-box {
-  margin-top: 40%;
-  margin-left: 3%;
-}
-
-.post {
-  width: 60%;
-  padding: 5%;
-  margin: 5% 0% 5% 1%;
-  background-color: $text-box-color;
-
-  @media screen and (max-width: 600px) {
-    float: none;
-    margin-left: auto;
-  }
-
-  h2 {
-    margin-top: 6%;
-  }
-}
-
-.language-javascript {
-  background-color: black;
-}
+/* || GENERAL STYLES */
 
 body {
   background-color: $background-color;
@@ -94,26 +30,42 @@ a:hover {
   color: $highlight-color;
 }
 
-#title-figure {
-  color: $highlight-color;
-}
-
 p strong {
   font-weight: bold;
   color: $highlight-color;
 }
 
+.language-javascript {
+  background-color: black;
+}
 
-/* home page settings */
+/* || GLOBAL ELEMENTS STYLES*/
 
+/* most of this styling is done just to override default minima styles */
+
+.page-content {
+  padding: 0;
+}
+
+.wrapper {
+  min-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper::after {
+  max-width: -1%;
+}
+
+/* || HOME STYLES */
 
 #home-wrapper {
-  background-color: $text-box-color;
+  background-color: $main-box-bcolor;
   width: 50%;
   margin: 10% auto;
   padding: 5%;
 
-  @media screen and (max-width: $max-mobile-width) {
+  @media screen and (max-width: $screen-width-600) {
     width: 90%;
   }
 }
@@ -131,7 +83,6 @@ p strong {
   border-right-color: $highlight-color;
   box-shadow: 9px 9px 10px -3px #f53585;
 }
-
 
 #home-description {
   max-width: 90%;
@@ -165,21 +116,92 @@ li:not(:last-child) {
   }
 
 #home-social-box {
-  display: flexbox;
-  width: 35%;
+  width: 100%;
+  text-align: center;
   margin: 0% auto;
   height: 8%;
-  max-height: auto;
   ;
 }
 
 .home-social-icon {
-  max-width: 20%;
+  max-width: 50px;
   min-width: 40px;
   max-height: auto;
   margin: 5%;
   color: gray;
 }
+
+
+
+
+
+
+
+
+.post-wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  @media screen and (max-width: $screen-width-600) {
+    display: block;
+    align-items: center;
+  }
+}
+
+.left-box {
+  width: 20%;
+  display: flex;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+
+  @media screen and (max-width: 600px) {
+    position: static;
+    width: 90%;
+    font-size: medium;
+    background-color: $main-box-bcolor;
+    margin-bottom: 3%;
+    left: auto;
+    float: none;
+  }
+}
+
+.toc-box {
+  margin-top: 40%;
+  margin-left: 3%;
+}
+
+.post {
+  width: 60%;
+  padding: 5%;
+  margin: 5% 0% 5% 1%;
+  background-color: $main-box-bcolor;
+
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin-left: auto;
+  }
+
+  h2 {
+    margin-top: 6%;
+  }
+}
+
+
+
+
+
+#title-figure {
+  color: $highlight-color;
+}
+
+
+
+
+/* home page settings */
+
+
+
 
 /* post template settings */
 
