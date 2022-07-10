@@ -158,10 +158,3 @@ function foo() {
 
 ```
 
-## Sources
-
-- [https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch4.md]
-- [https://developer.mozilla.org/en-US/docs/Glossary/Hoisting]
-- [https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/]
-
-#
