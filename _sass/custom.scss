@@ -62,7 +62,8 @@ p strong {
 /* || HOME STYLES */
 
 #home-wrapper {
-
+  margin: 1% 0 1% 0;
+  padding: 1%;
   @media screen and (min-width: $screen-width-600) {
     background-color: $main-box-bcolor;
     width: 50%;
