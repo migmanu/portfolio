@@ -46,6 +46,10 @@ p strong {
 .page-content {
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: $screen-width-600) {
+    min-width: 100%;
+  }
 }
 
 .wrapper {
@@ -53,7 +57,7 @@ p strong {
 
   @media screen and (min-width: $screen-width-600) {
     margin: 0 auto;
-    min-width: 90%;
+    min-width: 95%;
   }
 }
 
@@ -147,13 +151,14 @@ li:not(:last-child) {
 /* || POST STYLES */
 
 .post-wrapper {
-  margin: 10% 0 1% 0;
+  margin: 3% 0 1% 0;
   display: block;
   align-items: center;
 
   @media screen and (min-width: $screen-width-600) {
     display: flex;
     align-items: flex-start;
+    background-color: $main-box-bcolor;
   }
 }
 
@@ -161,9 +166,9 @@ li:not(:last-child) {
   display: none;
 
   @media screen and (min-width: 600px) {
-    width: 30%;
+    width: 20%;
+    margin-left: 5%;
     display: flex;
-    background-color: $background-color;
     align-items: flex-start;
     position: sticky;
     top: 0;
@@ -171,8 +176,13 @@ li:not(:last-child) {
 }
 
 .toc-box {
-  margin-top: 40%;
+  margin-top: 60%;
   margin-left: 3%;
+
+  @media screen and (min-width: $screen-width-600) {
+    font-size: small;
+    margin-left: 0;
+  }
 }
 
 .mobile-toc {
@@ -188,10 +198,9 @@ li:not(:last-child) {
   margin: 0 auto;
 
   @media screen and (min-width: 600px) {
-    width: 60%;
+    width: 50%;
     padding: 5%;
-    margin: 5% 0% 5% 10%;
-    background-color: $main-box-bcolor;
+    margin: 5% 0% 5% 5%;
   }
 
   h2 {
