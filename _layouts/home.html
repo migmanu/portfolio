@@ -16,7 +16,7 @@ layout: default
         Hire me! Hire me!
       </p>
     </div>
-  {%- if site.posts.size > 0 -%}
+    {%- if site.posts.size > 0 -%}
     <h2 id="post-list-heading">{{ page.list_title | default: "> my latests posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
@@ -27,17 +27,20 @@ layout: default
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {{ post.excerpt }}
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
 
-  {%- endif -%}
+    {%- endif -%}
     <div id="home-social-box">
-      <a href="https://github.com/migmanu" target="_blank"><img class="home-social-icon" src="/icons/github_logo.png" alt="github logo"></a>
-      <a href="https://twitter.com/migmanu_" target="_blank"><img class="home-social-icon" src="/icons/twitter-logo.png" alt="twitter logo"></a>
-      <a href="https://www.linkedin.com/in/manuel-migoya-bussolotti-a1b5a9bb/" target="_blank"><img class="home-social-icon" src="/icons/linkedin-icon.png" alt="linkedin logo"></a>
+      <a href="https://github.com/migmanu" target="_blank"><img class="home-social-icon" src="/icons/github-logo.svg"
+          alt="github logo"></a>
+      <a href="https://twitter.com/migmanu_" target="_blank"><img class="home-social-icon" src="/icons/twitter-logo.svg"
+          alt="twitter logo"></a>
+      <a href="https://www.linkedin.com/in/manuel-migoya-bussolotti-a1b5a9bb/" target="_blank"><img
+          class="home-social-icon" src="/icons/linkedin-logo.svg" alt="linkedin logo"></a>
     </div>
   </div>
 </div>

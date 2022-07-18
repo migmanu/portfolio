@@ -1,6 +1,7 @@
 /* || VARIABLES */
 
 $highlight-color: #ff7aad;
+$secondary-highlight-color: #f53585;
 $main-box-bcolor: #1c2126;
 $background-color: #181c20;
 $basic-font: white;
@@ -90,7 +91,7 @@ p strong {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: $highlight-color;
-  box-shadow: 9px 9px 10px -3px #f53585;
+  box-shadow: 9px 9px 10px -3px $secondary-highlight-color;
 
   @media screen and (min-width: $screen-width-600) {
     font-size: 50px;
@@ -193,12 +194,22 @@ li:not(:last-child) {
   opacity: 0.6;
   border-radius: 10%;
   padding: 0.25rem;
-  top: calc(100vh - 5rem);
+  top: calc(100vh - 5.5rem);
   right: 1rem;
   pointer-events: all;
   width: 30px;
 }
 
+.to-home {
+  position: fixed;
+  opacity: 0.6;
+  border-radius: 10%;
+  padding: 0.25rem;
+  top: calc(100vh - 3rem);
+  right: 1rem;
+  pointer-events: all;
+  width: 30px;
+}
 .home-link {
   color: $highlight-color;
 

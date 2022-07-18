@@ -383,7 +383,9 @@ li:not(:last-child) { margin-top: 2px; margin-bottom: 2px; }
 .to-top-box { position: absolute; top: 100vh; bottom: 5rem; right: 0.50rem; pointer-events: none; }
 @media screen and (min-width: 600px) { .to-top-box { display: none; } }
 
-.to-top { position: fixed; opacity: 0.6; border-radius: 10%; padding: 0.25rem; top: calc(100vh - 5rem); right: 1rem; pointer-events: all; width: 30px; }
+.to-top { position: fixed; opacity: 0.6; border-radius: 10%; padding: 0.25rem; top: calc(100vh - 5.5rem); right: 1rem; pointer-events: all; width: 30px; }
+
+.to-home { position: fixed; opacity: 0.6; border-radius: 10%; padding: 0.25rem; top: calc(100vh - 3rem); right: 1rem; pointer-events: all; width: 30px; }
 
 .home-link { color: #ff7aad; }
 .home-link a:visited { color: #ff7aad; }
