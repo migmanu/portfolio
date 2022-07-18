@@ -73,6 +73,7 @@ p strong {
   @media screen and (min-width: $screen-width-600) {
     background-color: $main-box-bcolor;
     width: 50%;
+    max-width: 800px;
     margin: 5% auto;
     padding: 3%;
   }
@@ -172,6 +173,29 @@ li:not(:last-child) {
     align-items: flex-start;
     position: sticky;
     top: 0;
+  }
+}
+
+.to-top-box {
+  position: absolute;
+  top: 100vh;
+  bottom: 5rem;
+  right: 0.50rem;
+  pointer-events: none
+}
+
+.to-top {
+  position: fixed;
+  top: calc(100vh - 5rem);
+  right: 2rem;
+  pointer-events: all;
+}
+
+.home-link {
+  color: $highlight-color;
+
+  a:visited {
+    color: $highlight-color
   }
 }
 
