@@ -1,29 +1,78 @@
 ---
 layout: post
-title:  "a test post"
+title:  "Scope in JavaScript"
 date:   2022-06-21 18:05:19 +0200
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+# Scope
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Before ES6 there was only **Global scope** and **Function scope**. ES6 introduced **Block scope**.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Basically, Scope is a set of rules that determine how the program organizes variables, where they are stored and how are they fetched.
 
-Jekyll also offers powerful support for code snippets:
+## Global Scope
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Global variables are declared outside functions and are accessible to all scripts and functions.
+They can be declared with `var`, `const`or `let`
+[[Const, Let and Var]]. But they can also be initialized without being declared.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+```JavaScript
+var globalVariable = "global variable" // Global scope
+const anotherGlobal = "this time with const"  // Global scope
+let yetAnother = "and another"  // Global scope
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+function myFunction() {
+        // code here can access all of the above declared variables
+    }
+
+```
+
+If you assign a value to an undeclared variable it becomes global when the assignment is executed:
+
+```JavaScript
+myFunction();
+
+// code here can accessed globalVariable
+
+function myFunction() {
+        globalVariable = "no declaration, no var const or let used"
+    }
+
+```
+
+## Function scope
+
+Variables defined within a function can only be accessed within that same function. This is the same for `const`, `let` or `var`.
+
+```JavaScript
+// Code here cannot access any of the variables declared in myFunction
+
+function myFunction() {
+        var varVariable = "declared with var";
+        const constVariable = "declared with const";
+        let letVariable = "declared with let";
+    }
+
+```
+
+## Block scope
+
+[[Block]]
+Block scope was provided in ES6 with the `let` and `const` keywords.
+
+Variables declared inside a { } block cannot be accessed outside of the block.
+
+Variables declared with the `var` keyword cannot have block scope.
+
+```JavaScript
+{
+    const first = 1;
+    let second = 2;
+    var third = 3;
+}
+
+var sumOf = first + second; // ERROR neither one nor two can be accessed outside the block 
+var sumOf = third // three can be accessed
+
+```
