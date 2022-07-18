@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>JavaScript functions | Manuel Migoya</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="JavaScript functions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A function is a set of statements that perform a task. It takes some input and return some output with a clear relation between them." />
+<meta property="og:description" content="A function is a set of statements that perform a task. It takes some input and return some output with a clear relation between them." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2022/06/21/JavaScript-Functions.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2022/06/21/JavaScript-Functions.html" />
+<meta property="og:site_name" content="Manuel Migoya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-21T18:05:19+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JavaScript functions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-21T18:05:19+02:00","datePublished":"2022-06-21T18:05:19+02:00","description":"A function is a set of statements that perform a task. It takes some input and return some output with a clear relation between them.","headline":"JavaScript functions","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2022/06/21/JavaScript-Functions.html"},"url":"http://localhost:4000/jekyll/update/2022/06/21/JavaScript-Functions.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Manuel Migoya" /><link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/icons/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/icons/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/icons/favicon-16x16.png"
+  />
+</head>
+<body>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="post-wrapper">
+  <div class="left-box">
+    <div class="toc-box">
+      <h2 class="home-link"><a href="/"> &lt Back Home</a></h2>
+      <h2>Document outline</h2>
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#function-declaration">Function Declaration</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#function-declaration-requirements--example">Function Declaration Requirements &amp; Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#function-expression">Function Expression</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#function-expression-requirements--example">Function Expression Requirements &amp; Example</a></li>
+<li class="toc-entry toc-h3"><a href="#function-expression-hoisting">Function Expression Hoisting</a></li>
+<li class="toc-entry toc-h3"><a href="#named-functions-expressions">Named functions expressions</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#named-function-expressions-advantages">named function expressions advantages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#arrow-function-expressions">Arrow Function Expressions</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#arrow-function-requirements--examples">Arrow Function Requirements &amp; Examples</a></li>
+<li class="toc-entry toc-h3"><a href="#arrow-function-benefits-and-limitations">Arrow Function Benefits and Limitations</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#benefits">Benefits</a></li>
+<li class="toc-entry toc-h4"><a href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#arrow-functions-and-this">Arrow Functions and this</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+  </div>
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline"><span id="title-figure">> </span>JavaScript functions
+      </h1>
+      <p>21 Jun, 2022</p>
+      </time>
+    </header>
+    <div class="mobile-toc">
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#function-declaration">Function Declaration</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#function-declaration-requirements--example">Function Declaration Requirements &amp; Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#function-expression">Function Expression</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#function-expression-requirements--example">Function Expression Requirements &amp; Example</a></li>
+<li class="toc-entry toc-h3"><a href="#function-expression-hoisting">Function Expression Hoisting</a></li>
+<li class="toc-entry toc-h3"><a href="#named-functions-expressions">Named functions expressions</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#named-function-expressions-advantages">named function expressions advantages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#arrow-function-expressions">Arrow Function Expressions</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#arrow-function-requirements--examples">Arrow Function Requirements &amp; Examples</a></li>
+<li class="toc-entry toc-h3"><a href="#arrow-function-benefits-and-limitations">Arrow Function Benefits and Limitations</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#benefits">Benefits</a></li>
+<li class="toc-entry toc-h4"><a href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#arrow-functions-and-this">Arrow Functions and this</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+    <div class="post-content e-content" itemprop="articleBody">
+      <p>A function is a set of statements that perform a task. It takes some input and return some output with a clear relation between them.</p>
+
+<p>They are a way of performing similar actions repeatedly in the script, without the need to code them again and again.</p>
+
+<p>In order to be used, functions must be declared inside the [[Scope]] they will be called from.</p>
+
+<p>Functions are the <em>“building blocks”</em> of a program. Some of the most widely used ones are built-in-functions that JavaScript already comes with. Such as <code class="language-plaintext highlighter-rouge">promtp()</code> or <code class="language-plaintext highlighter-rouge">console</code>.</p>
+
+<p>Of course, we can create our own functions. This is most commonly done with [[#Function Declaration]] , [[#Function Expression]], [[#Arrow Functions]] and the [[#Function Constructor]].</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">myFunction</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+	<span class="p">...</span><span class="nx">body</span><span class="p">...</span> <span class="c1">// this function has Global Scope and takes two arguments</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="function-declaration">Function Declaration</h2>
+<p>Function declarations (also called <strong>function declaration</strong> or <strong>function statement</strong>) in JavaScript can be done with the keyword <code class="language-plaintext highlighter-rouge">function</code>.</p>
+
+<h3 id="function-declaration-requirements--example">Function Declaration Requirements &amp; Example</h3>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">function</code> keyword</li>
+  <li>a name</li>
+  <li>followed by the comma-separated parameters inside parentheses (optional)</li>
+  <li>and closed with the function’s code between curly brackets (optional)</li>
+</ul>
+
+<p>Functions are called using their name followed by parentheses. If any parameters are expected, they should be included inside those parentheses separated by commas. Data passed to a function this way is called <em>argument</em>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">firstFunction</span> <span class="p">(</span><span class="nx">param1</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">first function has been declared!</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">secondFunction</span> <span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">second function has been declared!</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">thirdFunction</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">third function has been declared!</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="nx">firstFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">);</span>
+
+<span class="nx">secondFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">);</span>
+
+<span class="nx">thirdFunction</span><span class="p">();</span>
+
+</code></pre></div></div>
+
+<h2 id="function-expression">Function Expression</h2>
+<p>A function expression is when a function is declared inside an expression.</p>
+
+<h3 id="function-expression-requirements--example">Function Expression Requirements &amp; Example</h3>
+<ul>
+  <li>variable declaration keyword (optional): [[Const, Let and Var]]. The keyword choice may affect [[Scope]]</li>
+  <li>variable name</li>
+  <li>the <code class="language-plaintext highlighter-rouge">function</code> keyword</li>
+  <li>function name (optional): If omitted the function is anonymous. The name is only local to the function body</li>
+  <li>parameters (optional)</li>
+  <li>function body (optional)</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">variable1</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">firstFunction</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+	<span class="p">...</span><span class="nx">body</span><span class="p">...</span> <span class="c1">// named function expression</span>
+<span class="p">};</span>
+
+<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{...</span><span class="nx">body</span><span class="p">...})();</span> <span class="c1">// anonymous function</span>
+
+<span class="kd">var</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="p">...</span><span class="nx">body</span><span class="p">...</span> <span class="c1">// anonymous function with no passed argumets</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h3 id="function-expression-hoisting">Function Expression Hoisting</h3>
+<p>As seen in [[Hoisting#Variable hoisting|Variable Hoisting]], variable declarations are hoisted, variables expressions are not .</p>
+
+<p>This is why the following works:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculator</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">firstResult</span> <span class="o">=</span> <span class="nx">add</span><span class="p">()</span>
+  <span class="kd">function</span> <span class="nx">add</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// function declaration gets hoisted to top of its scope</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="kd">const</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">//anonymus function expression doesn't get hoisted</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">secondResult</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">()</span>
+
+  <span class="k">return</span> <span class="p">(</span><span class="nx">firstResult</span><span class="p">,</span> <span class="nx">secondResult</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">calculator</span><span class="p">()</span> <span class="c1">// prints 4 and 9</span>
+
+</code></pre></div></div>
+
+<p>But the following doesn’t:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculator</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">secondResult</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">()</span>
+
+  <span class="kd">const</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">secondResult</span>
+<span class="p">}</span>
+
+<span class="nx">calculator</span><span class="p">()</span> <span class="c1">// ReferenceError: Cannot access 'multiply' before initialization</span>
+
+</code></pre></div></div>
+
+<h3 id="named-functions-expressions">Named functions expressions</h3>
+<p>Anonymous functions expressions are <em>implicitly</em> named with the name of the variable they are declared inside. But it is possible to <em>explicitly</em> name function expressions.</p>
+
+<p>Named functions are used to refer to a function inside its own body. Therefore, their name is only accessible inside their body scope.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// implicitly named 'foo'</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Dog</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">foo</span><span class="p">()</span> <span class="c1">// prints 'Dog'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">foo</span><span class="p">)</span> <span class="c1">// function</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// myVariable</span>
+
+<span class="kd">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">myFunction</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">bar</span><span class="p">)</span> <span class="c1">// function</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">myFunction</span><span class="p">)</span> <span class="c1">// function</span>
+	
+<span class="p">}</span>
+
+<span class="nx">myFunction</span><span class="p">()</span> <span class="c1">// ReferenceError: myFunction is not defined</span>
+<span class="nx">bar</span><span class="p">()</span> <span class="c1">// no errors</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">foo</span><span class="p">)</span> <span class="c1">// undefined</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">bar</span><span class="p">)</span> <span class="c1">// function</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">//myFunction</span>
+
+</code></pre></div></div>
+
+<h4 id="named-function-expressions-advantages">named function expressions advantages</h4>
+<ul>
+  <li>Not many</li>
+  <li>They provide for cleaner more readable code</li>
+  <li>Easier to trace errors</li>
+  <li>(BEFORE ES6 ) Allow for recursive calls using that name (though with ES6 this can also be achieved using the implicit variable name in anonymous functions expressions)</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">recursion</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+  <span class="nx">nextN</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nextN</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">recursion</span><span class="p">(</span><span class="nx">nextN</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// 3 2 1 </span>
+
+<span class="kd">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">recursion</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+  <span class="nx">nextN</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nextN</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">bar</span><span class="p">(</span><span class="nx">nextN</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// aldo 3 2 1</span>
+
+
+</code></pre></div></div>
+
+<h2 id="arrow-function-expressions">Arrow Function Expressions</h2>
+<p><em>Arrow functions</em> are a short alternative to traditional <em>function expressions</em>, thought they do have some limitations.</p>
+
+<p>They are called arrow functions for the <code class="language-plaintext highlighter-rouge">=&gt;</code> marker that’s used to create them.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arrowFunction</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">argN</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">expression</span>
+</code></pre></div></div>
+
+<p>It is important to note that arrow functions are <em>always</em> expressions and <em>always</em> anonymous. They cannot be declared (in the sense function declaration works) and they cannot be named.</p>
+
+<p>Arrow functions were introduced with ES6.</p>
+
+<h3 id="arrow-function-requirements--examples">Arrow Function Requirements &amp; Examples</h3>
+<p>Arrow functions require the following elements:</p>
+
+<ul>
+  <li>Parameters (optional):
+    <ul>
+      <li>
+        <p>If only one argument is passed then no parenthesis are needed:</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">singleArgument</span> <span class="o">=</span> <span class="nx">arg1</span> <span class="o">=&gt;</span> <span class="nx">expression</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>If no arguments are passed then empty parenthesis are needed:</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">noArguments</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">expression</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>The <code class="language-plaintext highlighter-rouge">=&gt;</code> marker</li>
+  <li>The function’s body (optional):
+    <ul>
+      <li>If there is only one expression in can be placed in the same line with no curly brackets needed. Note than in this case the function has an implied <code class="language-plaintext highlighter-rouge">return</code> statement
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arrowFunction</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>If there is more than one expression it needs to be encased by curly brackets. In this case the <code class="language-plaintext highlighter-rouge">return</code> statement must be explicitize like in traditional functions</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arrowFunction</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">function init</span><span class="dl">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">arg1</span> <span class="o">/</span> <span class="nx">arg2</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="arrow-function-benefits-and-limitations">Arrow Function Benefits and Limitations</h3>
+<p>Arrow functions are a bit of a disputed topic. Some people love them, some not so much. Because they have some major limitations, they should’t be used indiscriminately. On the other hand, they do make a lot of things easier and even prettier.</p>
+
+<p>So let’s take a look on some of the advantages and disadvantages of arrow functions.</p>
+
+<h4 id="benefits">Benefits</h4>
+<ul>
+  <li>They are a more concise and readable way of writing functions. One line arrow functions especially. The <code class="language-plaintext highlighter-rouge">function</code>,  <code class="language-plaintext highlighter-rouge">return</code> and the <code class="language-plaintext highlighter-rouge">{...}</code> can all be omitted.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">this</code> inside them is automatically bounded to the function’s surrounding scope. See next subsection for more info.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">=&gt;</code> marker is a lot easier to write than the verbose <code class="language-plaintext highlighter-rouge">function</code> keyword. Of course this is only an advantage as long as you don’t use keybindings to help you code.</li>
+  <li>They look pretty: This may sound superficial, irrelevant or even repetitive. And it’s, of course, a personal preference. But I do want to emphasize how elegant arrow functions can look. To me, they are just a pleasure to write and read .And I can still remember how amazed I was the first time I came by them.</li>
+</ul>
+
+<h4 id="limitations">Limitations</h4>
+<ul>
+  <li>As pointed out in <a href="https://www.bookstack.cn/read/ES6Beyond/spilt.7.ch2.md">You Don’t Know JS</a>, arrow functions may become harder to read than normal functions. Wait, isn’t that the opposite of what I mentioned in their benefits? Kinda. You see, as an arrow function grows in statements, it gets harder and harder to identify the <code class="language-plaintext highlighter-rouge">=&gt;</code> marker at a quick glance. This does not happen with the <code class="language-plaintext highlighter-rouge">function</code> keyword. Of course, this is based on the author’s personal experience and may vary depending the tools used to write code.</li>
+  <li>Again, the <code class="language-plaintext highlighter-rouge">this</code> inside them is bound to the surrounding scope. They don’t have their own <code class="language-plaintext highlighter-rouge">this</code>. More about it in the next subsection.</li>
+</ul>
+
+<h3 id="arrow-functions-and-this">Arrow Functions and <code class="language-plaintext highlighter-rouge">this</code></h3>
+<p>Arrow functions have <em>lexical scoping</em>, which means they don’t bind their own <code class="language-plaintext highlighter-rouge">this</code> but rather inherit it from their parent scope. As seen in the [[#Arrow Function benefits and limitations | Benefits and Limitations]] , though they can be very helpful, they are not recommended for every escenario.</p>
+
+<p>Explaining <em>this</em> is out of the scope of this note. For quick reference read <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">MOD’s article</a> and watch this video:</p>
+
+
+    </div>
+    <a class="u-url" href="/jekyll/update/2022/06/21/JavaScript-Functions.html" hidden></a>
+  </article>
+  <div class="to-top-box">
+    <a href="#title-figure" class="to-top"><img src="../icons/arrow-line-up.png"></a>
+  </div>
+
+      </div>
+    </main>
+  </body>
+
+</html>

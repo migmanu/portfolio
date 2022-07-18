@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Scope in JavaScript | Manuel Migoya</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Scope in JavaScript" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scope" />
+<meta property="og:description" content="Scope" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html" />
+<meta property="og:site_name" content="Manuel Migoya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-21T18:05:19+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scope in JavaScript" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-21T18:05:19+02:00","datePublished":"2022-06-21T18:05:19+02:00","description":"Scope","headline":"Scope in JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"},"url":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Manuel Migoya" /><link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/icons/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/icons/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/icons/favicon-16x16.png"
+  />
+</head>
+<body>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="post-wrapper">
+  <div class="left-box">
+    <div class="toc-box">
+      <h2 class="home-link"><a href="/"> &lt Back Home</a></h2>
+      <h2>Document outline</h2>
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#scope">Scope</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#global-scope">Global Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#function-scope">Function scope</a></li>
+<li class="toc-entry toc-h2"><a href="#block-scope">Block scope</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+  </div>
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline"><span id="title-figure">> </span>Scope in JavaScript
+      </h1>
+      <p>21 Jun, 2022</p>
+      </time>
+    </header>
+    <div class="mobile-toc">
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#scope">Scope</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#global-scope">Global Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#function-scope">Function scope</a></li>
+<li class="toc-entry toc-h2"><a href="#block-scope">Block scope</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+    <div class="post-content e-content" itemprop="articleBody">
+      <h1 id="scope">Scope</h1>
+
+<p>Before ES6 there was only <strong>Global scope</strong> and <strong>Function scope</strong>. ES6 introduced <strong>Block scope</strong>.</p>
+
+<p>Basically, Scope is a set of rules that determine how the program organizes variables, where they are stored and how are they fetched.</p>
+
+<h2 id="global-scope">Global Scope</h2>
+
+<p>Global variables are declared outside functions and are accessible to all scripts and functions.
+They can be declared with <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">const</code>or <code class="language-plaintext highlighter-rouge">let</code>
+[[Const, Let and Var]]. But they can also be initialized without being declared.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">globalVariable</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">global variable</span><span class="dl">"</span> <span class="c1">// Global scope</span>
+<span class="kd">const</span> <span class="nx">anotherGlobal</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">this time with const</span><span class="dl">"</span>  <span class="c1">// Global scope</span>
+<span class="kd">let</span> <span class="nx">yetAnother</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">and another</span><span class="dl">"</span>  <span class="c1">// Global scope</span>
+
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// code here can access all of the above declared variables</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>If you assign a value to an undeclared variable it becomes global when the assignment is executed:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myFunction</span><span class="p">();</span>
+
+<span class="c1">// code here can accessed globalVariable</span>
+
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">globalVariable</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">no declaration, no var const or let used</span><span class="dl">"</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="function-scope">Function scope</h2>
+
+<p>Variables defined within a function can only be accessed within that same function. This is the same for <code class="language-plaintext highlighter-rouge">const</code>, <code class="language-plaintext highlighter-rouge">let</code> or <code class="language-plaintext highlighter-rouge">var</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Code here cannot access any of the variables declared in myFunction</span>
+
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">varVariable</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">declared with var</span><span class="dl">"</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">constVariable</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">declared with const</span><span class="dl">"</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">letVariable</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">declared with let</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="block-scope">Block scope</h2>
+
+<p>[[Block]]
+Block scope was provided in ES6 with the <code class="language-plaintext highlighter-rouge">let</code> and <code class="language-plaintext highlighter-rouge">const</code> keywords.</p>
+
+<p>Variables declared inside a { } block cannot be accessed outside of the block.</p>
+
+<p>Variables declared with the <code class="language-plaintext highlighter-rouge">var</code> keyword cannot have block scope.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">first</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">second</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">third</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">sumOf</span> <span class="o">=</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span> <span class="c1">// ERROR neither one nor two can be accessed outside the block </span>
+<span class="kd">var</span> <span class="nx">sumOf</span> <span class="o">=</span> <span class="nx">third</span> <span class="c1">// three can be accessed</span>
+
+</code></pre></div></div>
+
+    </div>
+    <a class="u-url" href="/jekyll/update/2022/06/21/Scope-in-JavaScript.html" hidden></a>
+  </article>
+  <div class="to-top-box">
+    <a href="#title-figure" class="to-top"><img src="../icons/arrow-line-up.png"></a>
+  </div>
+
+      </div>
+    </main>
+  </body>
+
+</html>
