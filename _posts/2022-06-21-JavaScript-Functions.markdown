@@ -250,6 +250,3 @@ Arrow functions have *lexical scoping*, which means they don't bind their own `t
 
 Explaining *this* is out of the scope of this note. For quick reference read [MOD's article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) and watch this video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2mRN8FyjnE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
