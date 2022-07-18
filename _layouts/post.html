@@ -2,24 +2,28 @@
 layout: default
 ---
 <div class="post-wrapper">
-    <div class="left-box">
-        <div class="toc-box">
-            <h2>Outline</h2>
-            {% toc %}
-        </div>
+  <div class="left-box">
+    <div class="toc-box">
+      <h2 class="home-link"><a href="/"> &lt Back Home</a></h2>
+      <h2>Document outline</h2>
+      {% toc %}
     </div>
-    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-            <header class="post-header">
-                <h1 class="post-title p-name" itemprop="name headline"><span id="title-figure">> </span>{{ page.title | escape }}</h1>
-                <p>{{ page.date | date: "%d %b, %Y" }}</p>
-                </time>
-            </header>
-            <div class="mobile-toc">
-                {% toc %}
-            </div>
-            <div class="post-content e-content" itemprop="articleBody">
-                {{ content }}
-            </div>
-      <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-    </article>
-</div>
+  </div>
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline"><span id="title-figure">> </span>{{ page.title | escape }}
+      </h1>
+      <p>{{ page.date | date: "%d %b, %Y" }}</p>
+      </time>
+    </header>
+    <div class="mobile-toc">
+      {% toc %}
+    </div>
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+  <div class="to-top-box">
+    <a href="#title-figure" class="to-top"><img src="../icons/arrow-line-up.png"></a>
+  </div>
