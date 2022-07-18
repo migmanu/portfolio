@@ -352,7 +352,7 @@ p strong { font-weight: bold; color: #ff7aad; }
 #home-wrapper { margin: 1% 0 1% 0; padding: 1%; }
 @media screen and (min-width: 600px) { #home-wrapper { background-color: #1c2126; width: 50%; max-width: 800px; margin: 5% auto; padding: 3%; } }
 
-#home-heading { width: 90%; margin-bottom: 5%; font-size: 60px; color: white; border-bottom-width: 2px; border-bottom-style: solid; border-color: #ff7aad; border-right-width: 2px; border-right-style: solid; border-right-color: #ff7aad; box-shadow: 9px 9px 10px -3px #f53585; }
+#home-heading { width: 90%; margin-top: 1%; margin-bottom: 5%; font-size: 60px; color: white; border-bottom-width: 2px; border-bottom-style: solid; border-color: #ff7aad; border-right-width: 2px; border-right-style: solid; border-right-color: #ff7aad; box-shadow: 9px 9px 10px -3px #f53585; }
 @media screen and (min-width: 600px) { #home-heading { font-size: 50px; } }
 
 #title-figure { color: #ff7aad; }
