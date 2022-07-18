@@ -18,7 +18,7 @@ Global variables are declared outside functions and are accessible to all script
 They can be declared with `var`, `const`or `let`
 [[Const, Let and Var]]. But they can also be initialized without being declared.
 
-```JavaScript
+```javascript
 var globalVariable = "global variable" // Global scope
 const anotherGlobal = "this time with const"  // Global scope
 let yetAnother = "and another"  // Global scope
@@ -31,7 +31,7 @@ function myFunction() {
 
 If you assign a value to an undeclared variable it becomes global when the assignment is executed:
 
-```JavaScript
+```javascript
 myFunction();
 
 // code here can accessed globalVariable
@@ -46,7 +46,7 @@ function myFunction() {
 
 Variables defined within a function can only be accessed within that same function. This is the same for `const`, `let` or `var`.
 
-```JavaScript
+```javascript
 // Code here cannot access any of the variables declared in myFunction
 
 function myFunction() {
@@ -66,7 +66,7 @@ Variables declared inside a { } block cannot be accessed outside of the block.
 
 Variables declared with the `var` keyword cannot have block scope.
 
-```JavaScript
+```javascript
 {
     const first = 1;
     let second = 2;

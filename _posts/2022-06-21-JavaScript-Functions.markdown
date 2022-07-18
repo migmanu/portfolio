@@ -7,7 +7,6 @@ categories: jekyll update
 ---
 
 
-# JavaScript Functions
 A function is a set of statements that perform a task. It takes some input and return some output with a clear relation between them.
 
 They are a way of performing similar actions repeatedly in the script, without the need to code them again and again.
@@ -18,7 +17,7 @@ Functions are the *"building blocks"* of a program. Some of the most widely used
 
 Of course, we can create our own functions. This is most commonly done with [[#Function Declaration]] , [[#Function Expression]], [[#Arrow Functions]] and the [[#Function Constructor]].
 
-```JavaScript
+```javascript
 
 function myFunction (arg1, arg2) {
 	...body... // this function has Global Scope and takes two arguments
@@ -37,7 +36,7 @@ Function declarations (also called **function declaration** or **function statem
 
 Functions are called using their name followed by parentheses. If any parameters are expected, they should be included inside those parentheses separated by commas. Data passed to a function this way is called *argument*.
 
-```JavaScript
+```javascript
 
 function firstFunction (param1) {
 	console.log("first function has been declared!")
@@ -70,7 +69,7 @@ A function expression is when a function is declared inside an expression.
 - parameters (optional)
 - function body (optional)
 
-````JavaScript
+````javascript
 
 const variable1 = function firstFunction (arg1, arg2) {
 	...body... // named function expression
@@ -88,7 +87,7 @@ var variable2 = function () {
 As seen in [[Hoisting#Variable hoisting|Variable Hoisting]], variable declarations are hoisted, variables expressions are not . 
 
 This is why the following works:
-````JavaScript
+````javascript
 
 function calculator () {
   let firstResult = add()
@@ -109,7 +108,7 @@ calculator() // prints 4 and 9
 ````
 
 But the following doesn't:
-```JavaScript
+```javascript
 
 function calculator () {
   let secondResult = multiply()
@@ -130,7 +129,7 @@ Anonymous functions expressions are *implicitly* named with the name of the vari
 
 Named functions are used to refer to a function inside its own body. Therefore, their name is only accessible inside their body scope.
 
-````JavaScript
+````javascript
 
 const foo = function () { // implicitly named 'foo'
 	console.log("Dog")
@@ -161,7 +160,7 @@ console.log(bar.name) //myFunction
 - Easier to trace errors
 - (BEFORE ES6 ) Allow for recursive calls using that name (though with ES6 this can also be achieved using the implicit variable name in anonymous functions expressions)
 
-````JavaScript
+````javascript
 
 const bar = function recursion (n) {
   console.log(n)
@@ -190,7 +189,7 @@ bar(3) // aldo 3 2 1
 
 They are called arrow functions for the `=>` marker that's used to create them.
 
-```JavaScript
+```javascript
 let arrowFunction = (arg1, arg2, ..., argN) => expression
 ```
 
@@ -204,26 +203,26 @@ Arrow functions require the following elements:
 - Parameters (optional): 
 	- If only one argument is passed then no parenthesis are needed:
 	  
-	  ```JavaScript
+	  ```javascript
 	  let singleArgument = arg1 => expression
 	  ```
 	  
 	- If no arguments are passed then empty parenthesis are needed:
 	  
-	  ```JavaScript
+	  ```javascript
 	  let noArguments = () => expression
 	  ```
 
 - The `=>` marker
 - The function's body (optional):
 	- If there is only one expression in can be placed in the same line with no curly brackets needed. Note than in this case the function has an implied `return` statement
-	  ```JavaScript
+	  ```javascript
 	  let arrowFunction = (arg1, arg2) => a * b;
 	  ```
 	  
 	- If there is more than one expression it needs to be encased by curly brackets. In this case the `return` statement must be explicitize like in traditional functions
 	  
-	  ```JavaScript
+	  ```javascript
 	  let arrowFunction (arg1, arg2) => {
 	      console.log("function init")
 	      return (arg1 / arg2)
