@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v3.9.2" />
 <meta property="og:title" content="Scope in JavaScript" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Scope" />
-<meta property="og:description" content="Scope" />
+<meta name="description" content="What is Scope" />
+<meta property="og:description" content="What is Scope" />
 <link rel="canonical" href="http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html" />
 <meta property="og:url" content="http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html" />
 <meta property="og:site_name" content="Manuel Migoya" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Scope in JavaScript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-21T18:05:19+02:00","datePublished":"2022-06-21T18:05:19+02:00","description":"Scope","headline":"Scope in JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"},"url":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-21T18:05:19+02:00","datePublished":"2022-06-21T18:05:19+02:00","description":"What is Scope","headline":"Scope in JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"},"url":"http://localhost:4000/jekyll/update/2022/06/21/Scope-in-JavaScript.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,12 @@
     <div class="toc-box">
       <h2 class="home-link"><a href="/"> &lt Back Home</a></h2>
       <h2>Document outline</h2>
-      
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#what-is-scope">What is Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#global-scope">Global Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#function-scope">Function scope</a></li>
+<li class="toc-entry toc-h2"><a href="#block-scope">Block scope</a></li>
+</ul>
     </div>
   </div>
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -64,10 +69,15 @@
       </time>
     </header>
     <div class="mobile-toc">
-      
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#what-is-scope">What is Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#global-scope">Global Scope</a></li>
+<li class="toc-entry toc-h2"><a href="#function-scope">Function scope</a></li>
+<li class="toc-entry toc-h2"><a href="#block-scope">Block scope</a></li>
+</ul>
     </div>
     <div class="post-content e-content" itemprop="articleBody">
-      <h1 id="scope">Scope</h1>
+      <h2 id="what-is-scope">What is Scope</h2>
 
 <p>Before ES6 there was only <strong>Global scope</strong> and <strong>Function scope</strong>. ES6 introduced <strong>Block scope</strong>.</p>
 

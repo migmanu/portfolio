@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "Scope in JavaScript"
+toc: true
 date:   2022-06-21 18:05:19 +0200
 categories: jekyll update
 ---
 
-# Scope
+## What is Scope
 
 Before ES6 there was only **Global scope** and **Function scope**. ES6 introduced **Block scope**.
 
